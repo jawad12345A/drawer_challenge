@@ -61,8 +61,10 @@ class CustomGuitarDrawerState extends State<CustomGuitarDrawer>
                       ..setEntry(3, 2, 0.001)
                       ..rotateY(math.pi / 2 * (1 - animationController.value)),
                     alignment: Alignment.centerRight,
-                    child: MyDrawer(),
-                  ),
+                    child: Container(
+                        width: maxSlide ,
+                        child: MyDrawer()),
+                    ),
                 ),
                 Transform.translate(
                   offset: Offset(maxSlide * animationController.value, 0),
